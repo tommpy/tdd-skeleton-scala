@@ -34,4 +34,11 @@ class RecentlyUsedListSuite extends AnyFunSuite {
     underTest.add(item)
     underTest.recentlyUsedItem shouldBe item
   }
+
+  test("retrieving the recently used item from an empty list should throw an exception") {
+    val underTest = new RecentlyUsedList()
+    assertThrows[NoSuchElementException] {
+      underTest.recentlyUsedItem
+    }
+  }
 }
