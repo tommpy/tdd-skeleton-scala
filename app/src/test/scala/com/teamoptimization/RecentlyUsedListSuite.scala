@@ -17,7 +17,7 @@ rather than added.
  */
 
 @RunWith(classOf[JUnitRunner])
-class AppSuite extends AnyFunSuite {
+class RecentlyUsedListSuite extends AnyFunSuite {
   test("should be empty when initialized") {
     new RecentlyUsedList().size shouldBe 0
   }
@@ -26,5 +26,12 @@ class AppSuite extends AnyFunSuite {
     val underTest = new RecentlyUsedList()
     underTest.add("1234")
     underTest.size shouldBe 1
+  }
+
+  test("returns the last added item") {
+    val underTest = new RecentlyUsedList()
+    val item = "1234"
+    underTest.add(item)
+    underTest.recentlyUsedItem shouldBe item
   }
 }

@@ -2,14 +2,18 @@ package com.teamoptimization
 
 class RecentlyUsedList {
 
-  var itemCount: Int = 0
+  private var item: String = null
 
   def add(item: String): Unit = {
-    itemCount = itemCount + 1
+    this.item = item
   }
 
   def size: Int = {
-    itemCount
+    if (item == null) 0 else 1
+  }
+
+  def recentlyUsedItem: String = {
+    item
   }
 
 }
