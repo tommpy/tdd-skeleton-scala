@@ -2,6 +2,7 @@ package com.teamoptimization
 
 import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 import org.scalatestplus.junit.JUnitRunner
 
 /*
@@ -17,7 +18,13 @@ rather than added.
 
 @RunWith(classOf[JUnitRunner])
 class AppSuite extends AnyFunSuite {
-  test("App has a greeting") {
-    assert(App.greeting() != null)
+  test("should be empty when initialized") {
+    new RecentlyUsedList().size shouldBe 0
+  }
+
+  test("size should increase when adding an item") {
+    val underTest = new RecentlyUsedList()
+    underTest.add("1234")
+    underTest.size shouldBe 1
   }
 }
