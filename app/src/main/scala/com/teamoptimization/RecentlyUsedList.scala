@@ -13,6 +13,7 @@ class RecentlyUsedList {
   }
 
   def recentlyUsedItem: String = {
+    if (item == null) throw new NoSuchElementException
     item
   }
 

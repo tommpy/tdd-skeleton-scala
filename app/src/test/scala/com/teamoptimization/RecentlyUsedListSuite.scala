@@ -41,4 +41,13 @@ class RecentlyUsedListSuite extends AnyFunSuite {
       underTest.recentlyUsedItem
     }
   }
+
+  test("returns most recently added item") {
+    val underTest = new RecentlyUsedList()
+    underTest.add("1234")
+    val item = "5678"
+    underTest.add(item)
+    underTest.recentlyUsedItem shouldBe item
+    underTest.size shouldBe 2
+  }
 }
