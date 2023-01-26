@@ -4,10 +4,9 @@ class RecentlyUsedList {
 
   var itemCount: Int = 0
 
-  def add(str: String) = {
+  def add(item: String): Unit = {
     itemCount = itemCount + 1
   }
-
 
   def size: Int = {
     itemCount
