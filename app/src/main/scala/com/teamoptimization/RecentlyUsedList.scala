@@ -2,13 +2,9 @@ package com.teamoptimization
 
 class RecentlyUsedList {
 
-  var phones: List[String] = List.empty
+  var isEmpty : Boolean = true
 
   def add(str: String): Unit = {
-    phones = phones.::(str)
-  }
-
-  def isEmpty(): Boolean = {
-    phones.isEmpty
+    isEmpty = false
   }
 }
