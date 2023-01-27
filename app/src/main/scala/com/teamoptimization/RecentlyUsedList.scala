@@ -7,6 +7,8 @@ class RecentlyUsedList {
 
   def getLastUsed: String = element
 
+  def getList(): Seq[String] = Seq()
+
   def add(str: String): Unit = {
     length = length+1
     element = str
