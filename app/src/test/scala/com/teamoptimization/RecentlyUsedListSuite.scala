@@ -1,6 +1,6 @@
 package com.teamoptimization
 
-import org.junit.Assert.{assertFalse, assertTrue}
+import org.junit.Assert.{assertEquals, assertFalse, assertThat, assertTrue}
 import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatestplus.junit.JUnitRunner
@@ -27,5 +27,10 @@ class RecentlyUsedListSuite extends AnyFunSuite {
     val underTest = new RecentlyUsedList
     underTest.add("1234")
     assertFalse(underTest.isEmpty)
+  }
+  test("A list should contain added element") {
+    val underTest = new RecentlyUsedList
+    underTest.add("1234")
+    assertEquals("1234", underTest.getLastUsed)
   }
 }
