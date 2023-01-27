@@ -22,7 +22,6 @@ class RecentlyUsedListSuite extends AnyFunSuite {
     val underTest = new RecentlyUsedList
     assertTrue(underTest.isEmpty)
   }
-
   test("A list is non empty when an item is added") {
     val underTest = new RecentlyUsedList
     underTest.add("1234")
@@ -38,5 +37,12 @@ class RecentlyUsedListSuite extends AnyFunSuite {
     underTest.add("1234")
     underTest.add("4321")
     assertEquals(2, underTest.length)
+  }
+  test("The list should hold more than two item") {
+    val underTest = new RecentlyUsedList
+    underTest.add("1234")
+    underTest.add("4321")
+    underTest.add("5678")
+    assertEquals(3, underTest.length)
   }
 }
