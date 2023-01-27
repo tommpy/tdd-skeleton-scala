@@ -51,4 +51,12 @@ class RecentlyUsedListSuite extends AnyFunSuite {
     underTest.add("4321")
     assertEquals(List("4321","1234"), underTest.getList)
   }
+  test("The list should contain unique elements") {
+    val underTest = new RecentlyUsedList
+    underTest.add("1234")
+    underTest.add("1234")
+    underTest.add("4321")
+    underTest.add("4321")
+    assertEquals(List("4321","1234"), underTest.getList)
+  }
 }
