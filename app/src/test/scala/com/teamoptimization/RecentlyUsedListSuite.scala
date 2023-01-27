@@ -49,6 +49,6 @@ class RecentlyUsedListSuite extends AnyFunSuite {
     val underTest = new RecentlyUsedList
     underTest.add("1234")
     underTest.add("4321")
-    assertEquals(List("4321","1234"), underTest.getList())
+    assertEquals(List("4321","1234"), underTest.getList)
   }
 }

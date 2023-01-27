@@ -1,17 +1,12 @@
 package com.teamoptimization
 
 class RecentlyUsedList {
-  private var element: String = ""
-
-  var length = 0
-
-  def getLastUsed: String = element
-
-  def getList(): Seq[String] = Seq()
-
+  private var list: Seq[String] = Seq.empty
+  def length: Int = list.size
+  def getLastUsed: String = list.head
+  def getList: Seq[String] = list
   def add(str: String): Unit = {
-    length = length+1
-    element = str
+    list = list.prepended(str)
   }
-  def isEmpty: Boolean = element.isEmpty
+  def isEmpty: Boolean = list.isEmpty
 }
