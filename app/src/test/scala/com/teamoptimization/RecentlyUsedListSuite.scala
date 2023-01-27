@@ -59,4 +59,8 @@ class RecentlyUsedListSuite extends AnyFunSuite {
     underTest.add("4321")
     assertEquals(List("4321","1234"), underTest.getList)
   }
+  test("Get latest on empty list should return None") {
+    val underTest = new RecentlyUsedList
+    assertEquals(None, underTest.getLastUsed)
+  }
 }
