@@ -1,5 +1,6 @@
 package com.teamoptimization
 
+import org.junit.Assert.assertTrue
 import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatestplus.junit.JUnitRunner
@@ -16,8 +17,9 @@ rather than added.
  */
 
 @RunWith(classOf[JUnitRunner])
-class AppSuite extends AnyFunSuite {
-  test("App has a greeting") {
-    assert(App.greeting() != null)
+class RecentlyUsedListSuite extends AnyFunSuite {
+  test("A new list is empty") {
+    val underTest = new RecentlyUsedList
+    assertTrue(underTest.isEmpty)
   }
 }
