@@ -1,6 +1,10 @@
 package com.teamoptimization
 
 class RecentlyUsedList {
-  def isEmpty: Boolean = false
+  def add(str: String): Unit = {
+
+  }
+
+  val isEmpty: Boolean = true
 
 }
