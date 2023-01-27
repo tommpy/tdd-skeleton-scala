@@ -1,11 +1,14 @@
 package com.teamoptimization
 
 class RecentlyUsedList {
-  val getLastUsed = ""
+  var length = 0
 
-  private var somethingHasBeenAdded = false
+  private var element: String = ""
+
+  def getLastUsed(): String = element
+
   def add(str: String): Unit = {
-    somethingHasBeenAdded = true
+    element = str
   }
-  def isEmpty: Boolean = !somethingHasBeenAdded
+  def isEmpty: Boolean = element.isEmpty
 }
