@@ -1,6 +1,6 @@
 package com.teamoptimization
 
-import org.junit.Assert.assertTrue
+import org.junit.Assert.{assertFalse, assertTrue}
 import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatestplus.junit.JUnitRunner
@@ -21,5 +21,11 @@ class RecentlyUsedListSuite extends AnyFunSuite {
   test("A list should be empty when initialised") {
     val underTest = new RecentlyUsedList
     assertTrue(underTest.isEmpty)
+  }
+
+  test("A list with one item should not be empty") {
+    val underTest = new RecentlyUsedList
+    underTest.add("Foo")
+    assertFalse(underTest.isEmpty)
   }
 }
